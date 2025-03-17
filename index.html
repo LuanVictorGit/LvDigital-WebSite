@@ -33,13 +33,14 @@
             <p class="text-base text-blue-400">Cadastrar-se</p>
         </a>        
     </header>
+
     <main class="mt-10 flex flex-col justify-center items-center">
-        <div class="bg-blue-200 rounded-2xl w-[95%] p-10 flex flex-col justify-center items-center gap-3">
+        <div class="bg-blue-200 rounded-2xl w-[95%] p-10 flex flex-col justify-center items-center gap-10">
             <div class="flex justify-center items-center gap-1">
                 <div class="border-blue-400 border-r-10 border-solid animate-pulse w-1 h-35"></div>
                 <div class="flex justify-center align-top mt-12">
                     <h1 class="min-h-50 animation-title text-blue-400 uppercase font-bold text-4xl w-150 text-left">
-                        Com a LvDigital, gerencie sua empresa de forma simples e eficiente!
+                        Gerencie sua empresa com um sistema completo ou solicite um orçamento para um site exclusivo com a identidade da sua marca!
                     </h1>
                 </div>
             </div>
@@ -51,8 +52,80 @@
             </div>
         </div>
     </main>
-    <footer>
 
+    <section class="mt-20 w-full flex flex-col justify-center items-center gap-10">
+        <h2 class="text-3xl font-bold text-blue-400 uppercase title">Nossos Serviços</h2>
+        <div class="w-[90%] flex justify-center items-center gap-10 flex-wrap p-10">
+            <div class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                <img src="./src/images/front-end-programming.png" alt="Ícone de design web" class="img-icon-cards">
+                <h3 class="text-xl font-bold text-blue-400 text-center">Desenvolvimento de Websites</h3>
+                <p class="text-center text-blue-600">Criamos sites modernos e responsivos, totalmente personalizados para atender às necessidades da sua empresa.</p>
+            </div>
+            <div class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                <img src="./src/images/project.png" alt="Ícone de gerenciamento" class="img-icon-cards">
+                <h3 class="text-xl font-bold text-blue-400 text-center">Sistemas de Gerenciamento</h3>
+                <p class="text-center text-blue-600">Oferecemos soluções completas para gerenciar seu negócio, desde controle de estoque até gestão financeira.</p>
+            </div>
+            <div class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                <img src="./src/images/seo.png" alt="Ícone de SEO" class="img-icon-cards">
+                <h3 class="text-xl font-bold text-blue-400 text-center">Otimização SEO</h3>
+                <p class="text-center text-blue-600">Melhoramos a visibilidade do seu site nos mecanismos de busca, aumentando o tráfego orgânico e as conversões.</p>
+            </div>
+        </div>
+
+        <div class="border-blue-200 border-b-6 border-dashed w-full m-2"></div> <!--divisor-->
+
+        <!-- Card de Mensalidade -->
+        <h2 class="text-3xl font-bold text-blue-400 uppercase mt-15 title">Nossos Planos</h2>
+        <div class="bg-gradient-to-br from-blue-100 to-blue-300 rounded-2xl p-15 flex flex-col justify-center items-center gap-5 min-w-110 min-h-150 hover:shadow-2xl hover:shadow-blue-600 transition-all ease-in-out duration-300 transform hover:scale-105">
+            <img src="./src/images/review.png" alt="Ícone de estoque" class="img-icon-cards w-16 h-16">
+            <h3 class="text-2xl font-bold text-blue-800 text-center">Gerenciamento Completo</h3>
+            <p class="text-center text-blue-700">Por apenas <span class="font-bold text-green-700">R$ 150,00/mês</span>, oferecemos:</p>
+            <ul class="list-disc list-inside text-blue-700 text-left space-y-2">
+                <li>Controle de estoque em tempo real</li>
+                <li>Entrada e saída de capital detalhada</li>
+                <li>Emissão automatizada de notas fiscais</li>
+                <li>Criação e gerenciamento de produtos</li>
+                <li>Relatórios personalizados (semanais, mensais e anuais)</li>
+                <li>Suporte 24/7 via chat e e-mail</li>
+                <li>Integração com marketplaces e e-commerces</li>
+                <li>Backup diário dos dados</li>
+            </ul>
+            <a href="#" title="contratar serviço de gerenciamento." class="buttonService transition-all ease-in-out duration-500 shadow-lg shadow-blue-600 bg-blue-500 w-fit p-3 flex justify-center items-center gap-2 rounded-full hover:bg-blue-700 mt-4 transform hover:scale-110">
+                <p class="uppercase font-bold text-white">Contratar Agora</p>
+                <img class="invert img-icon w-5 h-5" src="./src/images/shopping-cart.png" alt="imagem de compra">
+            </a>
+            <p class="text-sm text-blue-600 mt-2 text-center">Garanta já e receba <span class="font-bold text-green-700">10% de desconto</span> no primeiro mês!</p>
+        </div>
+    </section>
+
+    <section class="mt-20 w-full flex flex-col justify-center items-center gap-10 bg-blue-400 py-20">
+        <h2 class="text-3xl font-bold text-blue-50 uppercase">Por que escolher a LvDigital?</h2>
+        <div class="w-[90%] flex justify-center items-center gap-10 flex-wrap">
+            <div class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                <img src="./src/images/guarantee.png" alt="Ícone de qualidade" class="img-icon-cards">
+                <h3 class="text-xl font-bold text-blue-400">Qualidade Garantida</h3>
+                <p class="text-center text-blue-600">Nossos projetos são desenvolvidos com as melhores práticas do mercado, garantindo alta performance e satisfação.</p>
+            </div>
+            <div class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                <img src="./src/images/support.png" alt="Ícone de suporte" class="img-icon-cards">
+                <h3 class="text-xl font-bold text-blue-400">Suporte Personalizado</h3>
+                <p class="text-center text-blue-600">Oferecemos suporte técnico especializado para garantir que tudo funcione perfeitamente após a entrega.</p>
+            </div>
+            <div class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                <img src="./src/images/solution.png" alt="Ícone de inovação" class="img-icon-cards">
+                <h3 class="text-xl font-bold text-blue-400">Inovação Constante</h3>
+                <p class="text-blue-600 text-center">Estamos sempre atualizados com as últimas tendências e tecnologias para oferecer soluções modernas e eficientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-20 bg-blue-400 py-10 w-full flex flex-col justify-center items-center gap-5">
+        <div class="flex justify-center items-center gap-5">
+            <a href="#" class="text-blue-50 hover:text-blue-200 transition-all ease-in-out duration-300">Política de Privacidade</a>
+            <a href="#" class="text-blue-50 hover:text-blue-200 transition-all ease-in-out duration-300">Termos de Uso</a>
+        </div>
+        <p class="text-blue-50 text-center">© 2025 LvDigital. Todos os direitos reservados.</p>
     </footer>
 
     <script type="module" src="./src/scripts/animations/animateTitle.js"></script>

@@ -8,6 +8,11 @@
     @apply w-6 h-auto;
 }
 
+.img-icon-cards {
+    @apply w-20 h-auto p-5 invert rounded-4xl;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .paragraph {
     @apply text-base capitalize text-stone-200;
 }
@@ -24,6 +29,10 @@
     text-base
     hover:bg-blue-300
     hover:animate-pulse;
+}
+
+.title {
+    @apply p-5 text-blue-50 bg-blue-400;
 }
 
 .buttonService:hover img {
