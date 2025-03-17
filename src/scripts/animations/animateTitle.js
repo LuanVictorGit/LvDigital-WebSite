@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTitles(); // init the animations
 });
 
-let typingSpeed = 50;
-let eraseSpeed = 30;
+let typingSpeed = 35;
+let eraseSpeed = 20;
 let pauseBeforeErase = 250;
-let pauseAfterTyping = 5000;
+let pauseAfterTyping = 8000;
 
 function updateTitles() {
     let titles = document.querySelectorAll("*");
