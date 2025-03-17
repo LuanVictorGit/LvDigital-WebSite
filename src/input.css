@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+.button {
+    @apply transition-all ease-in-out duration-300 p-2 flex justify-center items-center gap-1 flex-row hover:animate-pulse;
+}
+
+.img-icon {
+    @apply w-6 h-auto;
+}
+
+.paragraph {
+    @apply text-base capitalize text-stone-200;
+}
+
+.buttonAccount {
+    @apply transition-all 
+    ease-in-out duration-500 
+    flex justify-center 
+    items-center w-fit 
+    gap-2 p-4 
+    bg-blue-50 
+    text-blue-400 
+    rounded-full 
+    text-base
+    hover:bg-blue-300
+    hover:animate-pulse;
+}
+
+.buttonService:hover img {
+    @apply animate-bounce;
+}
+
+.ButtonAccount:hover p {
+    @apply text-blue-50;
+}
