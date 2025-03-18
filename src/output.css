@@ -7,6 +7,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-green-500: oklch(0.723 0.219 149.579);
     --color-green-700: oklch(0.527 0.154 150.069);
     --color-blue-50: oklch(0.97 0.014 254.604);
     --color-blue-100: oklch(0.932 0.032 255.585);
@@ -17,6 +18,8 @@
     --color-blue-600: oklch(0.546 0.245 262.881);
     --color-blue-700: oklch(0.488 0.243 264.376);
     --color-blue-800: oklch(0.424 0.199 265.638);
+    --color-blue-900: oklch(0.379 0.146 265.522);
+    --color-blue-950: oklch(0.282 0.091 267.935);
     --color-stone-200: oklch(0.923 0.003 48.717);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -32,7 +35,10 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --font-weight-normal: 400;
     --font-weight-bold: 700;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
@@ -255,6 +261,12 @@
   .sticky {
     position: sticky;
   }
+  .bottom-12 {
+    bottom: calc(var(--spacing) * 12);
+  }
+  .left-46 {
+    left: calc(var(--spacing) * 46);
+  }
   .isolate {
     isolation: isolate;
   }
@@ -375,9 +387,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -386,6 +395,9 @@
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
+  }
+  .mt-\[-5rem\] {
+    margin-top: -5rem;
   }
   .box-border {
     box-sizing: border-box;
@@ -477,17 +489,20 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
   .h-30 {
     height: calc(var(--spacing) * 30);
   }
-  .h-35 {
-    height: calc(var(--spacing) * 35);
-  }
   .h-95 {
     height: calc(var(--spacing) * 95);
+  }
+  .h-150 {
+    height: calc(var(--spacing) * 150);
   }
   .h-auto {
     height: auto;
@@ -519,14 +534,26 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
   .w-16 {
     width: calc(var(--spacing) * 16);
+  }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
   .w-95 {
     width: calc(var(--spacing) * 95);
+  }
+  .w-120 {
+    width: calc(var(--spacing) * 120);
+  }
+  .w-140 {
+    width: calc(var(--spacing) * 140);
   }
   .w-150 {
     width: calc(var(--spacing) * 150);
@@ -1063,6 +1090,9 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
   .rounded-s {
     border-start-start-radius: 0.25rem;
     border-end-start-radius: 0.25rem;
@@ -1147,6 +1177,10 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+  }
   .border-b-6 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 6px;
@@ -1185,6 +1219,9 @@
   .border-blue-400 {
     border-color: var(--color-blue-400);
   }
+  .border-b-blue-900 {
+    border-bottom-color: var(--color-blue-900);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1211,6 +1248,12 @@
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
+  }
+  .bg-blue-900 {
+    background-color: var(--color-blue-900);
+  }
+  .bg-blue-950 {
+    background-color: var(--color-blue-950);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1405,8 +1448,8 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
@@ -1420,9 +1463,6 @@
   .p-15 {
     padding: calc(var(--spacing) * 15);
   }
-  .p-20 {
-    padding: calc(var(--spacing) * 20);
-  }
   .p-\[1\.5rem\] {
     padding: 1.5rem;
   }
@@ -1431,9 +1471,6 @@
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
-  }
-  .pr-8 {
-    padding-right: calc(var(--spacing) * 8);
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
@@ -1602,6 +1639,9 @@
   }
   .text-blue-800 {
     color: var(--color-blue-800);
+  }
+  .text-green-500 {
+    color: var(--color-green-500);
   }
   .text-green-700 {
     color: var(--color-green-700);
@@ -1786,14 +1826,14 @@
   .shadow-blue-300 {
     --tw-shadow-color: var(--color-blue-300);
   }
-  .shadow-blue-400 {
-    --tw-shadow-color: var(--color-blue-400);
-  }
   .shadow-blue-500 {
     --tw-shadow-color: var(--color-blue-500);
   }
   .shadow-blue-600 {
     --tw-shadow-color: var(--color-blue-600);
+  }
+  .shadow-blue-900 {
+    --tw-shadow-color: var(--color-blue-900);
   }
   .shadow-initial {
     --tw-shadow-color: initial;
@@ -2105,6 +2145,20 @@
       }
     }
   }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+  }
+  .hover\:bg-blue-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-300);
+      }
+    }
+  }
   .hover\:bg-blue-600 {
     &:hover {
       @media (hover: hover) {
@@ -2119,10 +2173,31 @@
       }
     }
   }
+  .hover\:bg-blue-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-800);
+      }
+    }
+  }
+  .hover\:bg-blue-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-900);
+      }
+    }
+  }
   .hover\:text-blue-200 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-blue-200);
+      }
+    }
+  }
+  .hover\:text-green-700 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green-700);
       }
     }
   }
@@ -2176,6 +2251,16 @@
       animation: var(--animate-pulse);
     }
   }
+}
+.containerSelected {
+  display: flex;
+  min-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  background-image: url("./images/background-body.png");
 }
 .img-icon {
   height: auto;
@@ -2236,6 +2321,76 @@
 }
 .ButtonAccount:hover p {
   color: var(--color-blue-50);
+}
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 8);
+  padding: calc(var(--spacing) * 8);
+}
+.formLogin div {
+  display: flex;
+  min-width: 85%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.formLogin input {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border-color: var(--color-blue-700);
+  background-color: var(--color-blue-900);
+  padding: calc(var(--spacing) * 4);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-blue-50);
+  --tw-outline-style: none;
+  outline-style: none;
+  @media (forced-colors: active) {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 600ms;
+  transition-duration: 600ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:focus {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &:focus {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+  }
+  &:focus {
+    background-color: var(--color-blue-800);
+  }
+}
+.formLogin label {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 1);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-blue-50);
+}
+.formLogin span {
+  color: var(--color-blue-200);
+}
+.formLogin menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @property --tw-translate-x {
   syntax: "*";

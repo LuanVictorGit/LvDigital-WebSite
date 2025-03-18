@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LvDigital | Desenvolvimento WebSites | Gerenciamento empresarial</title>
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="icon" type="image/png" href="./src/images/app_icon.png">
 </head>
 
-<body class="bg-blue-50 transition-all ease-in-out duration-300">
+<body class="bg-blue-50 transition-all ease-in-out duration-300 w-full">
     <header class="shadow-md gap-5 shadow-blue-500 flex justify-between items-center bg-blue-400 p-[1.5rem]">
-        <a href="#" title="Página Inicial" class="p-2 hover:animate-pulse transition-all duration-300">
+        <a href="#" title="Página Inicial" class="p-2 hover:animate-pulse transition-all duration-300" id="mainPage"
+            onclick="selectPage('containerMain');">
             <h1 class="flex justify-center items-center gap-[.25rem]">
                 <img src="./src/images/technology.png" alt="Ícone de tecnologia" class="img-icon">
                 <p class="text-xl text-stone-200 font-bold">LvDigital</p>
@@ -28,111 +30,196 @@
                 </a>
             </li>
         </ul>
-        <a href="#" class="buttonAccount" title="acessar sua conta.">
+        <a href="#" class="buttonAccount" title="acessar sua conta." onclick="selectPage('containerLogin');">
             <img src="./src/images/user.png" alt="Ícone de usuário" class="img-icon">
             <p class="text-base text-blue-400">Cadastrar-se</p>
         </a>
     </header>
 
-    <main class="mt-10 flex flex-col justify-center items-center">
-        <div class="bg-blue-200 rounded-2xl w-[95%] p-20 flex flex-col justify-center items-center gap-10 shadow-md shadow-blue-300">
-            
-            <div class="flex justify-center items-center gap-52">
+    <main class="mt-4 flex flex-col justify-center items-center min-h-screen w-full">
+
+        <!-- container da página principal -->
+        <div class="container containerSelected" id="containerMain">
+            <div
+                class="bg-blue-200 rounded-2xl w-[95%] p-15 flex flex-col justify-center items-center gap-10 shadow-md shadow-blue-300">
+
+                <div class="flex justify-center items-center gap-52">
+                    <div>
+                        <img class="w-120 h-auto animate-pulse" src="./src/images/app_icon.png" alt="">
+                    </div>
+                    <div class="flex justify-center align-top mt-12">
+                        <h1 class="min-h-50 text-blue-400 uppercase font-bold text-4xl w-150 text-left animate-title">
+                            gerencie sua empresa com facilidade e praticidade para emissão de notas fiscais e
+                            monitoramento! ✔
+                        </h1>
+                        <div class="border-blue-400 border-r-10 border-solid w-1 h-30"></div>
+                    </div>
+                </div>
                 <div>
-                    <img class="w-80 h-auto animate-pulse" src="./src/images/painel.png" alt="">
-                </div>
-                <div class="flex justify-center align-top mt-12">
-                    <h1 class="min-h-50 animation-title text-blue-400 uppercase font-bold text-4xl w-150 text-left">
-                        gerencie sua empresa com facilidade e praticidade para emissão de notas fiscais e monitoramento!
-                    </h1>
-                    <div class="border-blue-400 border-r-10 border-solid w-1 h-30"></div>
+                    <a href="#" title="solicitar serviço com nossa equipe."
+                        class="buttonService transition-all ease-in-out duration-500 shadow-md shadow-blue-500 bg-blue-400 w-fit p-6 pr-10 pl-10 flex justify-center items-center gap-2 rounded-full hover:bg-blue-600">
+                        <p class="uppercase font-bold text-blue-50">solicitar serviço</p>
+                        <img class="invert img-icon" src="./src/images/deal.png" alt="imagem de contato">
+                    </a>
                 </div>
             </div>
-            <div>
-                <a href="#" title="solicitar serviço com nossa equipe." class="buttonService transition-all ease-in-out duration-500 shadow-md shadow-blue-500 bg-blue-400 w-fit p-6 pr-10 pl-10 flex justify-center items-center gap-2 rounded-full hover:bg-blue-600">
-                    <p class="uppercase font-bold text-blue-50">solicitar serviço</p>
-                    <img class="invert img-icon" src="./src/images/deal.png" alt="imagem de contato">
-                </a>
+            <section class="mt-20 w-full flex flex-col justify-center items-center gap-10">
+                <h2 class="text-3xl font-bold text-blue-400 uppercase title">Nossos Serviços</h2>
+                <div class="w-[90%] flex justify-center items-center gap-10 flex-wrap p-10">
+                    <div
+                        class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                        <img src="./src/images/front-end-programming.png" alt="Ícone de design web"
+                            class="img-icon-cards">
+                        <h3 class="text-xl font-bold text-blue-400 text-center">Desenvolvimento de Websites</h3>
+                        <p class="text-center text-blue-600">Criamos sites modernos e responsivos, totalmente
+                            personalizados para atender às necessidades da sua empresa.</p>
+                    </div>
+                    <div
+                        class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                        <img src="./src/images/project.png" alt="Ícone de gerenciamento" class="img-icon-cards">
+                        <h3 class="text-xl font-bold text-blue-400 text-center">Sistemas de Gerenciamento</h3>
+                        <p class="text-center text-blue-600">Oferecemos soluções completas para gerenciar seu negócio,
+                            desde controle de estoque até gestão financeira.</p>
+                    </div>
+                    <div
+                        class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                        <img src="./src/images/seo.png" alt="Ícone de SEO" class="img-icon-cards">
+                        <h3 class="text-xl font-bold text-blue-400 text-center">Otimização SEO</h3>
+                        <p class="text-center text-blue-600">Melhoramos a visibilidade do seu site nos mecanismos de
+                            busca, aumentando o tráfego orgânico e as conversões.</p>
+                    </div>
+                </div>
+
+                <div class="border-blue-200 border-b-6 border-dashed w-full m-2"></div> <!--divisor-->
+
+                <!-- Card de Mensalidade -->
+                <h2 class="text-3xl font-bold text-blue-400 uppercase mt-15 title">Nossos Planos</h2>
+                <div
+                    class="bg-gradient-to-br from-blue-100 to-blue-300 rounded-2xl p-15 flex flex-col justify-center items-center gap-5 min-w-110 min-h-150 hover:shadow-2xl hover:shadow-blue-600 transition-all ease-in-out duration-300 transform hover:scale-105">
+                    <img src="./src/images/review.png" alt="Ícone de estoque" class="img-icon-cards w-16 h-16">
+                    <h3 class="text-2xl font-bold text-blue-800 text-center">Licença LvDigital</h3>
+                    <p class="text-center text-blue-700">Por apenas <span class="font-bold text-green-700">R$
+                            89,90/mês</span>, oferecemos:</p>
+                    <ul class="list-disc list-inside text-blue-700 text-left space-y-2">
+                        <li>Controle de estoque em tempo real</li>
+                        <li>Entrada e saída de capital detalhada</li>
+                        <li>Emissão automatizada de notas fiscais</li>
+                        <li>Criação e gerenciamento de produtos</li>
+                        <li>Relatórios personalizados (semanais, mensais e anuais)</li>
+                        <li>Suporte 24/7 via chat e e-mail</li>
+                        <li>Integração com marketplaces e e-commerces</li>
+                        <li>Backup diário dos dados</li>
+                    </ul>
+                    <a href="#" title="contratar serviço de gerenciamento."
+                        class="buttonService transition-all ease-in-out duration-500 shadow-lg shadow-blue-600 bg-blue-500 w-fit p-3 flex justify-center items-center gap-2 rounded-full hover:bg-blue-700 mt-4 transform hover:scale-110">
+                        <p class="uppercase font-bold text-white">Contratar Agora</p>
+                        <img class="invert img-icon w-5 h-5" src="./src/images/shopping-cart.png"
+                            alt="imagem de compra">
+                    </a>
+                    <p class="text-sm text-blue-600 mt-2 text-center">Garanta já e receba <span
+                            class="font-bold text-green-700">10% de desconto</span> no primeiro mês!</p>
+                </div>
+            </section>
+
+            <section class="mt-20 w-full flex flex-col justify-center items-center gap-10 bg-blue-400 py-20">
+                <h2 class="text-3xl font-bold text-blue-50 uppercase">Por que escolher a LvDigital?</h2>
+                <div class="w-[90%] flex justify-center items-center gap-10 flex-wrap">
+                    <div
+                        class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                        <img src="./src/images/guarantee.png" alt="Ícone de qualidade" class="img-icon-cards">
+                        <h3 class="text-xl font-bold text-blue-400">Qualidade Garantida</h3>
+                        <p class="text-center text-blue-600">Nossos projetos são desenvolvidos com as melhores práticas
+                            do mercado, garantindo alta performance e satisfação.</p>
+                    </div>
+                    <div
+                        class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                        <img src="./src/images/support.png" alt="Ícone de suporte" class="img-icon-cards">
+                        <h3 class="text-xl font-bold text-blue-400">Suporte Personalizado</h3>
+                        <p class="text-center text-blue-600">Oferecemos suporte técnico especializado para garantir que
+                            tudo funcione perfeitamente após a entrega.</p>
+                    </div>
+                    <div
+                        class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
+                        <img src="./src/images/solution.png" alt="Ícone de inovação" class="img-icon-cards">
+                        <h3 class="text-xl font-bold text-blue-400">Inovação Constante</h3>
+                        <p class="text-blue-600 text-center">Estamos sempre atualizados com as últimas tendências e
+                            tecnologias para oferecer soluções modernas e eficientes.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- container da página de login -->
+        <div class="container" id="containerLogin">
+            <div class="loginPage h-screen">
+                <div class="bg-blue-950 w-140 h-150 rounded-2xl shadow-blue-900 shadow-lg">
+                    <div>
+                        <h1
+                            class="w-full text-center p-6 text-2xl text-blue-50 uppercase font-bold flex justify-center items-center gap-2">
+                            <p>login</p>
+                            <img src="./src/images/enter.png" alt="" class="img-icon">
+                        </h1>
+                        <div class="border-b-4 border-b-blue-900"></div>
+                        <form onsubmit="login();" class="formLogin">
+                            <div>
+                                <label for="email">
+                                    <img src="./src/images/mail.png" alt="" class="img-icon">
+                                    <p>Email: <span>*</span></p>
+                                </label>
+                                <input type="email" name="email" id="email" class="w-full"
+                                    placeholder="Digite seu email" required>
+                            </div>
+                            <div>
+                                <label for="password">
+                                    <img src="./src/images/padlock.png" alt="" class="img-icon">
+                                    <p>Senha: <span>*</span></p>
+                                </label>
+                                <menu>
+                                    <input type="password" name="password" id="password" class="input"
+                                        placeholder="Digite sua senha" required>
+                                    <a href="#" onclick="
+                                                event.preventDefault();
+                                                const element = document.getElementById('password');
+                                                const elementImg = document.getElementById('img-password');
+                                                if (element.type === 'password') {
+                                                    element.type = 'text';
+                                                    elementImg.src = './src/images/passwordInvisible.png';
+                                                } else {
+                                                    element.type = 'password';
+                                                    elementImg.src = './src/images/passwordVisible.png';
+                                                }
+                                            " class="bg-blue-500 w-10 h-10 flex justify-center items-center rounded-md relative bottom-12 left-46 hover:bg-blue-300 transition-all ease-in-out duration-300">
+                                        <img class="img-icon" id="img-password" src="./src/images/passwordVisible.png"
+                                            alt="">
+                                    </a>
+                                </menu>
+                            </div>
+                            <div class="flex justify-center items-center mt-[-5rem]"></div>
+                            <button type="submit"
+                                class="p-4 w-50 bg-blue-900 rounded-full text-blue-50 hover:cursor-pointer hover:bg-blue-800 transition-all ease-in-out duration-300">logar</button>
+                    </div>
+                    <p class="text-blue-50 lowercase w-full text-center">ainda não possui uma conta ? <a href="#"
+                            class="text-green-500 hover:text-green-700 transition-all ease-in-out duration-300">cadastrar-se</a>
+                    </p>
+                    </form>
+                </div>
             </div>
+        </div>
         </div>
     </main>
 
-    <section class="mt-20 w-full flex flex-col justify-center items-center gap-10">
-        <h2 class="text-3xl font-bold text-blue-400 uppercase title">Nossos Serviços</h2>
-        <div class="w-[90%] flex justify-center items-center gap-10 flex-wrap p-10">
-            <div class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
-                <img src="./src/images/front-end-programming.png" alt="Ícone de design web" class="img-icon-cards">
-                <h3 class="text-xl font-bold text-blue-400 text-center">Desenvolvimento de Websites</h3>
-                <p class="text-center text-blue-600">Criamos sites modernos e responsivos, totalmente personalizados para atender às necessidades da sua empresa.</p>
-            </div>
-            <div class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
-                <img src="./src/images/project.png" alt="Ícone de gerenciamento" class="img-icon-cards">
-                <h3 class="text-xl font-bold text-blue-400 text-center">Sistemas de Gerenciamento</h3>
-                <p class="text-center text-blue-600">Oferecemos soluções completas para gerenciar seu negócio, desde controle de estoque até gestão financeira.</p>
-            </div>
-            <div class="bg-blue-200 rounded-2xl p-8 flex flex-col justify-start items-center gap-5 w-95 h-95 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
-                <img src="./src/images/seo.png" alt="Ícone de SEO" class="img-icon-cards">
-                <h3 class="text-xl font-bold text-blue-400 text-center">Otimização SEO</h3>
-                <p class="text-center text-blue-600">Melhoramos a visibilidade do seu site nos mecanismos de busca, aumentando o tráfego orgânico e as conversões.</p>
-            </div>
-        </div>
-
-        <div class="border-blue-200 border-b-6 border-dashed w-full m-2"></div> <!--divisor-->
-
-        <!-- Card de Mensalidade -->
-        <h2 class="text-3xl font-bold text-blue-400 uppercase mt-15 title">Nossos Planos</h2>
-        <div class="bg-gradient-to-br from-blue-100 to-blue-300 rounded-2xl p-15 flex flex-col justify-center items-center gap-5 min-w-110 min-h-150 hover:shadow-2xl hover:shadow-blue-600 transition-all ease-in-out duration-300 transform hover:scale-105">
-            <img src="./src/images/review.png" alt="Ícone de estoque" class="img-icon-cards w-16 h-16">
-            <h3 class="text-2xl font-bold text-blue-800 text-center">Licença LvDigital</h3>
-            <p class="text-center text-blue-700">Por apenas <span class="font-bold text-green-700">R$ 89,90/mês</span>, oferecemos:</p>
-            <ul class="list-disc list-inside text-blue-700 text-left space-y-2">
-                <li>Controle de estoque em tempo real</li>
-                <li>Entrada e saída de capital detalhada</li>
-                <li>Emissão automatizada de notas fiscais</li>
-                <li>Criação e gerenciamento de produtos</li>
-                <li>Relatórios personalizados (semanais, mensais e anuais)</li>
-                <li>Suporte 24/7 via chat e e-mail</li>
-                <li>Integração com marketplaces e e-commerces</li>
-                <li>Backup diário dos dados</li>
-            </ul>
-            <a href="#" title="contratar serviço de gerenciamento." class="buttonService transition-all ease-in-out duration-500 shadow-lg shadow-blue-600 bg-blue-500 w-fit p-3 flex justify-center items-center gap-2 rounded-full hover:bg-blue-700 mt-4 transform hover:scale-110">
-                <p class="uppercase font-bold text-white">Contratar Agora</p>
-                <img class="invert img-icon w-5 h-5" src="./src/images/shopping-cart.png" alt="imagem de compra">
-            </a>
-            <p class="text-sm text-blue-600 mt-2 text-center">Garanta já e receba <span class="font-bold text-green-700">10% de desconto</span> no primeiro mês!</p>
-        </div>
-    </section>
-
-    <section class="mt-20 w-full flex flex-col justify-center items-center gap-10 bg-blue-400 py-20">
-        <h2 class="text-3xl font-bold text-blue-50 uppercase">Por que escolher a LvDigital?</h2>
-        <div class="w-[90%] flex justify-center items-center gap-10 flex-wrap">
-            <div class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
-                <img src="./src/images/guarantee.png" alt="Ícone de qualidade" class="img-icon-cards">
-                <h3 class="text-xl font-bold text-blue-400">Qualidade Garantida</h3>
-                <p class="text-center text-blue-600">Nossos projetos são desenvolvidos com as melhores práticas do mercado, garantindo alta performance e satisfação.</p>
-            </div>
-            <div class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
-                <img src="./src/images/support.png" alt="Ícone de suporte" class="img-icon-cards">
-                <h3 class="text-xl font-bold text-blue-400">Suporte Personalizado</h3>
-                <p class="text-center text-blue-600">Oferecemos suporte técnico especializado para garantir que tudo funcione perfeitamente após a entrega.</p>
-            </div>
-            <div class="bg-blue-50 rounded-2xl p-8 flex flex-col justify-center items-center gap-5 w-80 hover:shadow-lg hover:shadow-blue-500 transition-all ease-in-out duration-300">
-                <img src="./src/images/solution.png" alt="Ícone de inovação" class="img-icon-cards">
-                <h3 class="text-xl font-bold text-blue-400">Inovação Constante</h3>
-                <p class="text-blue-600 text-center">Estamos sempre atualizados com as últimas tendências e tecnologias para oferecer soluções modernas e eficientes.</p>
-            </div>
-        </div>
-    </section>
-
     <footer class="mt-20 bg-blue-400 py-10 w-full flex flex-col justify-center items-center gap-5">
         <div class="flex justify-center items-center gap-5">
-            <a href="#" class="text-blue-50 hover:text-blue-200 transition-all ease-in-out duration-300">Política de Privacidade</a>
-            <a href="#" class="text-blue-50 hover:text-blue-200 transition-all ease-in-out duration-300">Termos de Uso</a>
+            <a href="#" class="text-blue-50 hover:text-blue-200 transition-all ease-in-out duration-300">Política de
+                Privacidade</a>
+            <a href="#" class="text-blue-50 hover:text-blue-200 transition-all ease-in-out duration-300">Termos de
+                Uso</a>
         </div>
         <p class="text-blue-50 text-center">© 2025 LvDigital. Todos os direitos reservados.</p>
     </footer>
 
     <script type="module" src="./src/scripts/animations/animateTitle.js"></script>
+    <script src="./src/scripts/index.js"></script>
 </body>
 
 </html>

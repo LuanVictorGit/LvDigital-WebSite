@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTitles(); // init the animations
 });
 
-let typingSpeed = 35;
-let eraseSpeed = 20;
+let typingSpeed = 20;
+let eraseSpeed = 5;
 let pauseBeforeErase = 250;
 let pauseAfterTyping = 8000;
 
 function updateTitles() {
     let titles = document.querySelectorAll("*");
     titles.forEach((title, index) => {
-        if (!title.classList.contains("animation-title")) return;
+        if (!title.classList.contains("animate-title")) return;
         let textTitle = title.textContent.trim();
         title.textContent = "";
         typeAndErase(title, textTitle, index * 20);
