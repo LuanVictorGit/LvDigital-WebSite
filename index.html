@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-blue-50 transition-all ease-in-out duration-300 w-full">
-    <header class="shadow-md gap-5 shadow-blue-500 flex justify-between items-center bg-blue-400 p-[1.5rem]">
+    <header class="shadow-md gap-5 shadow-blue-500 flex justify-between items-center bg-blue-400 p-[1.5rem] fixed z-10 top-0 w-full" style="height: var(--header-heigth);">
         <a href="#" title="Página Inicial" class="p-2 hover:animate-pulse transition-all duration-300" id="mainPage"
             onclick="selectPage('containerMain');">
             <h1 class="flex justify-center items-center gap-[.25rem]">
@@ -36,7 +36,7 @@
         </a>
     </header>
 
-    <main class="mt-4 flex flex-col justify-center items-center min-h-screen w-full">
+    <main class="flex flex-col justify-center items-center min-h-screen w-full" style="margin-top: calc(var(--header-heigth) + 2rem);">
 
         <!-- container da página principal -->
         <div class="container containerSelected" id="containerMain">
@@ -213,7 +213,7 @@
                 </div>
             </div>
             <div class="registerPage h-screen" style="display: none;"> <!-- page of register -->
-                <div class="bg-blue-950 w-140 h-150 rounded-2xl shadow-blue-900 shadow-lg">
+                <div class="bg-blue-950 w-140 h-190 rounded-2xl shadow-blue-900 shadow-lg">
                     <div>
                         <h1
                             class="w-full text-center p-6 text-2xl text-blue-50 uppercase font-bold flex justify-center items-center gap-2">
@@ -222,6 +222,14 @@
                         </h1>
                         <div class="border-b-4 border-b-blue-900"></div>
                         <form onsubmit="register(event);" class="formLogin">
+                            <div>
+                                <label for="username">
+                                    <img src="./src/images/id-card.png" alt="" class="img-icon">
+                                    <p>Usuário: <span>*</span></p>
+                                </label>
+                                <input type="text" name="username" id="username" class="w-full" placeholder="Digite seu nome"
+                                    required>
+                            </div>
                             <div>
                                 <label for="emailRegister">
                                     <img src="./src/images/mail.png" alt="" class="img-icon">
@@ -235,7 +243,7 @@
                                     <img src="./src/images/padlock.png" alt="" class="img-icon">
                                     <p>Senha: <span>*</span></p>
                                 </label>
-                                <menu>
+                                <menu class="mb-[-2.8rem]">
                                     <input type="password" name="password" id="passwordRegister" class="input"
                                         placeholder="Digite sua senha" required>
                                     <a href="#" onclick="
@@ -256,7 +264,15 @@
                                     </a>
                                 </menu>
                             </div>
-                            <div class="flex justify-center items-center mt-[-5rem]"></div>
+                            <div>
+                                <label for="city">
+                                    <img src="./src/images/building.png" alt="" class="img-icon">
+                                    <p>Cidade/UF: <span>*</span></p>
+                                </label>
+                                <input type="text" name="city" id="city"
+                                    class="w-full" placeholder="Ex: Porangatu Goiás" required>
+                            </div>
+                            <div class="flex justify-center items- mt-[-2.8rem]"></div>
                             <button type="submit"
                                 class="p-4 w-50 bg-blue-900 rounded-full text-blue-50 hover:cursor-pointer hover:bg-blue-800 transition-all ease-in-out duration-300">registrar</button>
                     </div>
