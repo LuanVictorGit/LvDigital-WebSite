@@ -1,0 +1,28 @@
+
+.navPanel {
+    @apply min-h-screen min-w-20 bg-blue-900 flex flex-col justify-start items-center gap-2 p-4 rounded-3xl;
+}
+
+.navPanel * {
+    @apply transition-all ease-in-out duration-300;
+}
+
+.navPanel a {
+    @apply shadow-md shadow-blue-950 p-4 bg-blue-950 rounded-full flex justify-start items-center min-w-full;
+}
+
+.navPanel a:hover {
+    @apply bg-blue-800 transition-all ease-in-out duration-500;
+}
+
+.navPanel a input {
+    @apply w-full p-4 rounded-full bg-blue-900 focus:bg-blue-800 outline-hidden text-blue-50 transition-all ease-in-out duration-600 border-blue-700 focus:border-l-4 focus:rounded-l-none font-normal;
+}
+
+.navPanel img {
+    @apply w-10 h-auto invert;
+}
+
+.navPanel p {
+    @apply text-blue-50 font-normal uppercase w-full text-center self-center font-bold;
+}

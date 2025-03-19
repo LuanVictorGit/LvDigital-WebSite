@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./styles/controllPanel.css";
 
 .button {
     @apply transition-all ease-in-out duration-300 p-2 flex justify-center items-center gap-1 flex-row hover:animate-pulse;
@@ -16,6 +17,18 @@ body {
 
 .img-icon {
     @apply w-6 h-auto;
+}
+
+.img-icon-2 {
+    @apply w-6 h-auto;
+}
+
+.img-icon-3 {
+    @apply w-8 h-auto;
+}
+
+.img-icon-4 {
+    @apply w-10 h-auto;
 }
 
 .img-icon-cards {

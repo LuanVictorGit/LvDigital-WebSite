@@ -6,16 +6,16 @@ document.addEventListener("DOMContentLoaded", ()=> {
         container.style.display = "none";
     }
 
-    document.getElementsByClassName("buttonAccount")[0].click();
-
     document.addEventListener("click", (event) => {
         if (event.target.href === "#"){
             event.preventDefault();
             window.scrollTo(0,0);
             document.getElementById("mainPage").click();
+            return;
         }
     });
 
+    selectPage("pageControll"); // selecionando a página para testar antes de produção.
     setTimeout(() => {
         window.scrollTo(0,0);
     }, 800);
