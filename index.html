@@ -313,7 +313,7 @@
                             for(let element of menu.querySelectorAll('*')) {
                                 loop: for(let el of element.querySelectorAll('*')) {
                                     if (el.src) continue loop;
-                                    el.style.display = 'flex';
+                                    el.style.display = null;
                                 }
                             }
                         }
