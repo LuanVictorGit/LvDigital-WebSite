@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LvDigital | Desenvolvimento WebSites | Gerenciamento empresarial</title>
+    <title>LvDigital | Gerenciamento empresarial | Desenvolvimento WebSites</title>
     <link rel="stylesheet" href="./src/output.css">
     <link rel="icon" type="image/png" href="./src/images/app_icon.png">
 </head>
@@ -149,9 +149,9 @@
             </section>
         </div>
 
-        <!-- container da página de login -->
+        <!-- container to page login and register -->
         <div class="container" id="containerLogin">
-            <div class="loginPage h-screen">
+            <div class="loginPage h-screen"> <!-- page of login -->
                 <div class="bg-blue-950 w-140 h-150 rounded-2xl shadow-blue-900 shadow-lg">
                     <div>
                         <h1
@@ -160,7 +160,7 @@
                             <img src="./src/images/enter.png" alt="" class="img-icon">
                         </h1>
                         <div class="border-b-4 border-b-blue-900"></div>
-                        <form onsubmit="login();" class="formLogin">
+                        <form onsubmit="login(event);" class="formLogin">
                             <div>
                                 <label for="email">
                                     <img src="./src/images/mail.png" alt="" class="img-icon">
@@ -188,7 +188,8 @@
                                                     element.type = 'password';
                                                     elementImg.src = './src/images/passwordVisible.png';
                                                 }
-                                            " class="bg-blue-500 w-10 h-10 flex justify-center items-center rounded-md relative bottom-12 left-46 hover:bg-blue-300 transition-all ease-in-out duration-300">
+                                            "
+                                        class="bg-blue-500 w-10 h-10 flex justify-center items-center rounded-md relative bottom-12 left-46 hover:bg-blue-300 transition-all ease-in-out duration-300">
                                         <img class="img-icon" id="img-password" src="./src/images/passwordVisible.png"
                                             alt="">
                                     </a>
@@ -199,12 +200,79 @@
                                 class="p-4 w-50 bg-blue-900 rounded-full text-blue-50 hover:cursor-pointer hover:bg-blue-800 transition-all ease-in-out duration-300">logar</button>
                     </div>
                     <p class="text-blue-50 lowercase w-full text-center">ainda não possui uma conta ? <a href="#"
-                            class="text-green-500 hover:text-green-700 transition-all ease-in-out duration-300">cadastrar-se</a>
+                            class="text-green-500 hover:text-green-700 transition-all ease-in-out duration-300" onclick="
+
+                                let containerLogin = document.getElementsByClassName('loginPage')[0];
+                                let containerRegister = document.getElementsByClassName('registerPage')[0];
+                                containerRegister.style.display = 'flex';
+                                containerLogin.style.display = 'none';
+
+                                ">cadastrar-se</a> <!-- script to show register page -->
                     </p>
                     </form>
                 </div>
             </div>
-        </div>
+            <div class="registerPage h-screen" style="display: none;"> <!-- page of register -->
+                <div class="bg-blue-950 w-140 h-150 rounded-2xl shadow-blue-900 shadow-lg">
+                    <div>
+                        <h1
+                            class="w-full text-center p-6 text-2xl text-blue-50 uppercase font-bold flex justify-center items-center gap-2">
+                            <p>registro</p>
+                            <img src="./src/images/add-user.png" alt="" class="img-icon">
+                        </h1>
+                        <div class="border-b-4 border-b-blue-900"></div>
+                        <form onsubmit="register(event);" class="formLogin">
+                            <div>
+                                <label for="emailRegister">
+                                    <img src="./src/images/mail.png" alt="" class="img-icon">
+                                    <p>Email: <span>*</span></p>
+                                </label>
+                                <input type="email" name="email" id="emailRegister" class="w-full" placeholder="Digite seu email"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="passwordRegister">
+                                    <img src="./src/images/padlock.png" alt="" class="img-icon">
+                                    <p>Senha: <span>*</span></p>
+                                </label>
+                                <menu>
+                                    <input type="password" name="password" id="passwordRegister" class="input"
+                                        placeholder="Digite sua senha" required>
+                                    <a href="#" onclick="
+                                                event.preventDefault();
+                                                const element2 = document.getElementById('password');
+                                                const elementImg2 = document.getElementById('img-password');
+                                                if (element2.type === 'password') {
+                                                    element2.type = 'text';
+                                                    elementImg2.src = './src/images/passwordInvisible.png';
+                                                } else {
+                                                    element2.type = 'password';
+                                                    elementImg2.src = './src/images/passwordVisible.png';
+                                                }
+                                            "
+                                        class="bg-blue-500 w-10 h-10 flex justify-center items-center rounded-md relative bottom-12 left-46 hover:bg-blue-300 transition-all ease-in-out duration-300">
+                                        <img class="img-icon" id="img-password" src="./src/images/passwordVisible.png"
+                                            alt="">
+                                    </a>
+                                </menu>
+                            </div>
+                            <div class="flex justify-center items-center mt-[-5rem]"></div>
+                            <button type="submit"
+                                class="p-4 w-50 bg-blue-900 rounded-full text-blue-50 hover:cursor-pointer hover:bg-blue-800 transition-all ease-in-out duration-300">registrar</button>
+                    </div>
+                    <p class="text-blue-50 lowercase w-full text-center">já possui uma conta ? <a href="#"
+                            class="text-green-500 hover:text-green-700 transition-all ease-in-out duration-300" onclick="
+                                
+                                let containerLogin = document.getElementsByClassName('loginPage')[0];
+                                let containerRegister = document.getElementsByClassName('registerPage')[0];
+                                containerRegister.style.display = 'none';
+                                containerLogin.style.display = 'flex';
+                                
+                                ">logar-se</a> <!-- script to run button do show login page. -->
+                    </p>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 

@@ -11,10 +11,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
     document.addEventListener("click", (event) => {
         if (event.target.href === "#"){
             event.preventDefault();
-            window.moveTo(0,0);
+            window.scrollTo(0,0);
             document.getElementById("mainPage").click();
         }
     });
+
+    setTimeout(() => {
+        window.scrollTo(0,0);
+    }, 800);
 
 });
 
@@ -28,6 +32,12 @@ async function selectPage(page) {
     container.style.display = "flex";
 }
 
-async function login() {
+// function to confirm login
+async function login(event) {
+
+}
+
+// function to confirm register
+async function register(event) {
 
 }

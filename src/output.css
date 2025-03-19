@@ -2180,13 +2180,6 @@
       }
     }
   }
-  .hover\:bg-blue-900 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-900);
-      }
-    }
-  }
   .hover\:text-blue-200 {
     &:hover {
       @media (hover: hover) {
@@ -2391,6 +2384,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+div {
+  animation: slideUp 0.5s ease-in-out forwards;
 }
 @property --tw-translate-x {
   syntax: "*";
